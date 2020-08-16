@@ -36,6 +36,7 @@
 
     header {
       width: 100%;
+      height: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -97,10 +98,10 @@
     }
 
     .main-content {
-      background: url('./Green\ Venn\ Diagram\ Business\ Logo\ \(1\).png');
-      background-size: contain;
+      background-image: url('./Green\ Venn\ Diagram\ Business\ Logo\ \(1\).png');
       background-repeat: no-repeat;
-      height: 100vmin;
+      background-size: cover;
+
 
     }
 
@@ -118,8 +119,166 @@
 
     }
 
+    .first-content p {
+      font-size: 1.2rem;
+      padding-top: 10px;
+    }
+
+    .first-content .first-para {
+      padding-top: 0;
+    }
+
+    .truck {
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+
+
+    }
+
+
+
+    .fa {
+      padding-left: 13px;
+      padding-right: 15px;
+    }
+
+    .truck-line {
+      height: 0;
+      width: 50px;
+      border-top: 1px solid black;
+
+    }
+
+    .mailbox {
+      padding-bottom: 20px;
+
+    }
+
+    .receipt {
+      width: 80%;
+      /* height: 250px; */
+      max-height: 700px;
+      background-color: white;
+      margin: 0 auto;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .receipt {
+      font-size: 1rem;
+      padding-bottom: 5px;
+    }
+
+    .shipped {
+      display: flex;
+      justify-content: center;
+      color: darkgreen;
+      padding-top: 20px;
+    }
+
+    .order-container {
+      margin: 0 auto;
+      width: 90%;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: solid 1px darkgreen;
+    }
+
+    .order {
+      padding-bottom: 8px;
+    }
+
+    .item-container {
+      margin: 0 auto;
+      width: 90%;
+      padding-top: 8px;
+      border-bottom: solid darkgreen 1px;
+    }
+
+    .label-container {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: .9rem;
+      color: darkgreen;
+    }
+
+    .item-label {
+      width: 30%;
+    }
+
+    .qty-label {
+      width: 15%;
+
+    }
+
+    .cost-label {
+      width: 15%;
+    }
+
+
+    .item {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 1rem;
+    }
+
+    .the-item {
+      width: 30%;
+    }
+
+    .item-quantity {
+      width: 15%;
+      margin-left: 15px;
+
+    }
+
+    .cost {
+      width: 15%;
+    }
+
+    .shipping-container {
+      margin: 0 auto;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed darkgreen;
+
+    }
+
+    .method-container {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      font-size: .8rem;
+    }    
+
+    .method-label {
+      padding-right: 3px;
+      color: darkgreen;
+      font-weight: bold;
+    }
+
+    .disclosure {
+      font-size: .7rem;
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .address {
+      padding-top: 10px;
+
+    }
+
+    .sent {
+      color: darkgreen;
+    }
+
     footer {
-      height: 300px;
+      height: 140px;
       background-color:#282828;;
       color: white;
       display: flex;
@@ -130,8 +289,10 @@
     }
 
     .footer-content {
-      width: 80%;
+      width: 50%;
       text-align: center;
+      font-size: .9rem;
+
     }
 
     .footer-text {
@@ -139,9 +300,14 @@
       font-size: .8rem;
     }
 
+    .fa-truck {
+      color: black;
+      
+    }
+
   </style>
 </head>
-<script src="https://use.fontawesome.com/3bcb9963a3.js"></script>
+<script src="https://kit.fontawesome.com/cf30c8e093.js" crossorigin="anonymous"></script>
 <body>
   <div id="wrapper">
     <header>
@@ -154,24 +320,64 @@
           <li>
             Store
           </li>
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i class="fas fa-shopping-cart"></i>
+         
         </ul>
       </div>
     </header>
     <div class="main-content">
       <div class="first-content">
         <h4>Your Azap order has shipped.</h4>
-        <p>Getting excited? You should be!</p>
+        <p class="first-para">Getting excited? You should be!</p>
+        <div class="truck">
+          <div class="truck-line"></div>
+          <i class="fa fa-truck" aria-hidden="true" ></i>
+          <div class="truck-line"></div>
+        </div>
+        <p class="mailbox">No need to camp out by the mailbox!</p>
       </div>
+      <div class="receipt">
+        <p class="shipped">Here's what we shipped:</p>
+        <div class="order-container">
+          <p class="order">Order #: XXXXXX</p>
+          <p class="order">Order Date: 8/23/20</p>
+        </div>
+        <div class="item-container">
+          <div class="label-container">
+            <p class="item-label">ITEM</p>
+            <p class="qty-label">QTY</p>
+            <p class="cost-label">COST</p>
+          </div>
+          <div class="item">
+            <p class="the-item">Razzle Cat Toy (Yellow)</p>
+            <p class="item-quantity">1</p>
+            <p class="cost">$12.52</p>
+          </div>
+        </div>
+        <div class="shipping-container">
+          <div class="method-container">
+            <p class="method-label">SHIPPING METHOD:</p>
+            <p class="method">Free (5 Business Days) (via FedEx Smart Post)</p>
+          </div>
+          <p class="disclosure">Some shipping areas may take up to 7 business days for delivery.</p>
+        </div>
+        <div class="address">
+          <p class="sent">Sent to:</p>
+          <p>XXXXXX</p>
+          <p>12345 XXXXXXX</p>
+          <p>XXXXXX</p>
+          <p>XXXXXXXXX</p>
+
+        </div>
+      </div>
+  
     </div>
       <footer>
         <div class="footer-content">
-          <p>123 Somewhere Ave.</p>
-            <p>Conyers, GA 12345, USA</p>
-          <p class="footer-text">You're recieving this email bacause you've signed up to recieve updates on order types you previously purchased. If you'd prefer not to recieve updates, you can unsubscribe anytime.</p>
+          <p>If you have any questions about your order, please contact us.</p>
         </div>
       </footer>
   </div>
   
 </body>
-</html>o 
+</html>
